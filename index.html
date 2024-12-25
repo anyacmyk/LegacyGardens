@@ -1,0 +1,67 @@
+<!--
+This is the home page of the website with the flipping tiles.
+It uses lots of grid items and different sections of CSS that
+arent present in this specific file. The code is in script.js
+and the styling is style.css.
+
+All of the data is loaded elsewhere and put in the gridpart section.
+All other code is same as other pages.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Gardens</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="content">
+      <p id="search-count"><strong>0</strong> records displayed.</p>
+      <!-- Grid part section where the js file will ad to -->
+      <section id="gridpart" class="grid"></section>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="javascript/script.js"></script>
+
+      <!-- Header Section -->
+      <div class="header">
+        <p class="logo">
+          <a href="index.html" class="logo-link">Legacy Gardens</a>
+        </p>
+        <nav>
+          <a href="map.html">Map</a>
+          <a href="create.html">Create</a>
+          <a href="help.html">Help</a>
+
+          <!-- Search form section -->
+          <form id="filter">
+            <input id="search-text" type="text" placeholder="Search" value="" />
+          </form>
+        </nav>
+      </div>
+    </div>
+  </body>
+
+  <!-- Footer section, very basic-->
+  <footer>
+    <p>&copy Legacy Gardens</p>
+    <p><a href="about.html">About Us</a></p>
+  </footer>
+</html>

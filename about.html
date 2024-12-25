@@ -1,0 +1,143 @@
+<!-- 
+ This page is just aabout the team, about the website and datasets.
+ There is no specific code just for this page and it uses the same
+ styling as previous pages.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Gardens</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Draggable container is the default for styling, reused from image.html as this section is used for dragging flowers-->
+    <div id="draggable-container">
+      <div class="info-box">
+        <h2 id="image-title">About Legacy Gardens</h2>
+        <p class="profile-text" sty>
+          Legacy Gardens is a serene online space where you can create a
+          personalized memorial to honor and celebrate the life of your loved
+          one. With our interactive platform, you can design a virtual tribute
+          that reflects their spirit, using custom photos, heartfelt messages,
+          and beautiful elements like flowers, which you can simply drag and
+          drop onto the memorial page.<br /><br />
+
+          At Legacy Gardens, we believe that memories deserve to be cherished in
+          a way that fosters healing and reflection. Our core values of
+          compassion, respect, and remembrance are at the heart of everything we
+          do. We offer families a meaningful way to keep the legacy of their
+          loved ones alive, creating a lasting digital garden where stories,
+          emotions, and memories can bloom.<br /><br />
+
+          We are committed to providing a peaceful and supportive environment,
+          where each memorial is unique, and where family and friends can visit
+          and contribute anytime. At Legacy Gardens, we believe in the power of
+          memories and the beauty of shared connections. Let us help you build a
+          space of love, peace, and eternal remembrance.
+        </p>
+      </div>
+      <img id="displayed-image" src="images/team.JPG" style="width: 80%" />
+      <div class="info-box">
+        <h2 id="image-title">Our Team:</h2>
+        <p class="profile-text">
+          <b>Anya Goel:</b> Coder and Designer and Leader of the Group
+        </p>
+        <p class="profile-text">
+          <b>Kurt McCullough:</b> Coder and Designer and Leader of the Group
+        </p>
+        <p class="profile-text">
+          <b>Mariana Ramirez Tirado:</b> Coder and Designer and Leader of the
+          Group
+        </p>
+        <p class="profile-text">
+          <b>Sammy Bugata:</b> Coder and Designer and <b><i>Leader</i></b> of
+          the Group
+        </p>
+        <p class="profile-text">
+          <b>Yujie Wei:</b> Coder and Designer and Leader of the Group
+        </p>
+        <p class="profile-text">
+          <b>About Us:</b> We are a fun multicultural team that love to get
+          things other than our work done. We all do the work together and never
+          ever wake up on the wrong side of the bed (iykyk). From the beggining
+          we have always had fun and try to get through DECO1800 (DECO7180 if
+          youre a degenerate) with an okay grade. If you dont like the website
+          we dont care :). Our role model is duo (not mobile) from duolingo bc
+          he be thicc.
+        </p>
+      </div>
+      <div class="info-box">
+        <h2 id="image-title">Datasets</h2>
+        <p class="profile-text">
+          <b>Photos 1914 - 1918:</b> This data comes from the queensland
+          goverment and contains images from 1914-1918. The solider images,
+          names and descriptions have come from this dataset. Any additional
+          data that the user creates will be stores locally. As there is a
+          subject column in this dataset, the soldier portraits are filtered by
+          this so only them can be shown.
+        </p>
+        <br /><br /><br />
+        <p class="profile-text">
+          <b>Wildlife:</b> This data comes from ALA or the Atlas of Living
+          Australia. It has information about flora and fauna of Australia and
+          the regions that they come from. Images provided from the dataset will
+          also be used to show what the flower will look like.
+        </p>
+
+        <br /><br /><br />
+        <h2 id="image-title">API's</h2>
+        <p class="profile-text">
+          <b>Map Box:</b> This is an API that has information about continents,
+          states and cities. This will be used to map the flowers into reigons.
+        </p>
+      </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+    
+    <!-- This redirect file is the one that actiavtes when a user goes to search.-->
+    <script src="javascript/redirect.js"></script>
+
+    <!-- Header Section.-->
+    <div class="header">
+      <p class="logo">
+        <a href="index.html" class="logo-link">Legacy Gardens</a>
+      </p>
+      <nav>
+        <a href="map.html">Map</a>
+        <a href="create.html">Create</a>
+        <a href="help.html">Help</a>
+
+        <form id="filter">
+          <input
+            id="search-redirect-text"
+            type="text"
+            placeholder="Search"
+            value=""
+          />
+        </form>
+      </nav>
+    </div>
+  </body>
+  <footer>
+    <p>&copy Legacy Gardens</p>
+    <p><a href="about.html">About Us</a></p>
+  </footer>
+</html>

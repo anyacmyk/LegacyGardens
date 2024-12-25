@@ -1,0 +1,84 @@
+<!-- This document helps the user to create a custom memorial garden.
+ They have to input an image and a name as standard but can then
+ add as many different extra fields as they want.
+
+ It uses "create.js" significantly for displaying cutom fields 
+ but mostly for trasferring the data to "result.html".
+ 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Gardens</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="input-section">
+      <h2 style="text-align: center">Upload Your Soldier</h2>
+      <div class="input-row">
+        <label for="pictureUpload">Upload Picture:</label>
+        <input type="file" id="pictureUpload" accept="image/*" required />
+      </div>
+      <div class="input-row">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter name" required />
+      </div>
+
+      <!-- The cutom inputs will go here -->
+      <div id="CustomInputs"></div>
+      <button id="addInputButton">Add Information Field</button>
+      <button id="submitButton">Submit</button>
+    </div>
+
+    <!--Header section. Placed down here to sit on top of other elements.-->
+    <div class="header">
+      <p class="logo">
+        <a href="index.html" class="logo-link">Legacy Gardens</a>
+      </p>
+      <nav>
+        <a href="map.html">Map</a>
+        <a href="create.html">Create</a>
+        <a href="help.html">Help</a>
+
+        <form id="filter">
+          <input
+            id="search-redirect-text"
+            type="text"
+            placeholder="Search"
+            value=""
+          />
+        </form>
+      </nav>
+    </div>
+
+    <script src="javascript/create.js"></script>
+    <script src="javascript/redirect.js"></script>
+  </body>
+  <footer>
+    <p>&copy Legacy Gardens</p>
+    <p><a href="about.html">About Us</a></p>
+  </footer>
+</html>

@@ -1,0 +1,128 @@
+<!--
+This is the page that users will be directed to when they
+create a new memorial garden. it is alsmot identical to
+image.html but uses result.js and create.js to display
+the custom data the user has provided.
+
+Contains the same code for image.html where the user can
+drag the flowers all around the screen or "draggable container"
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Gardens</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="content">
+      <!-- Draggable container-->
+      <div id="draggable-container">
+        <img id="displayed-image" src="" />
+        <div class="info-box">
+          <h2 id="resultName"></h2>
+          <div id="resultFields"></div>
+        </div>
+      </div>
+
+      <!-- Header Section again-->
+      <div class="header">
+        <p class="logo">
+          <a href="index.html" class="logo-link">Legacy Gardens</a>
+        </p>
+        <nav>
+          <a href="map.html">Map</a>
+          <a href="create.html">Create</a>
+          <a href="help.html">Help</a>
+
+          <form id="filter">
+            <input id="search-redirect-text" type="text" placeholder="Search" value="" />
+          </form>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Section that holds all of the flowers-->
+    <div id="flower-dock">
+      <div class="flower-container">
+        <img
+          id="flower1"
+          class="flower"
+          src="images/Thyme Honey Myrtle (Melaleuca thymifolia).png"
+          alt="Thyme Hponey Myrtle"
+        />
+        <img
+          id="flower2"
+          class="flower"
+          src="images/Banksia (Banksia sp.).png"
+          alt="Banksia"
+        />
+        <img
+          id="flower3"
+          class="flower"
+          src="images/Creeping Boobialla (Myoporum sp.).png"
+          alt="Creeping Boobialla"
+        />
+        <img
+          id="flower4"
+          class="flower"
+          src="images/Cut Leaf Daisy (Brachyscome multifida).png"
+          alt="Cut Leaf Daisy"
+        />
+        <img
+          id="flower5"
+          class="flower"
+          src="images/Grevillea (Grevillea sp.).png"
+          alt="Grevillea"
+        />
+        <img
+          id="flower6"
+          class="flower"
+          src="images/Guinea Vine (Hibbertia scandens).png"
+          alt="Guinea Vine "
+        />
+        <img
+          id="flower7"
+          class="flower"
+          src="images/Knobby Club Rush (Ficinia nodosa).png"
+          alt="Knobby Club Rush"
+        />
+        <img
+          id="flower8"
+          class="flower"
+          src="images/Native Violet (Viola banksii).png"
+          alt="Native Violet"
+        />
+        <img
+          id="flower9"
+          class="flower"
+          src="images/Tea Tree (Leptospermum sp.).png"
+          alt="Tea Tree"
+        />
+      </div>
+      <button id="remove-clones">Remove Flowers</button>
+    </div>
+
+    <!-- There is no footer on these pages as the flower dock covers it.-->
+    <script src="javascript/result.js"></script>
+    <script src="javascript/redirect.js"></script>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 90px;
+  -ms-scroll-rails: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  font-family: "DM Sans", sans-serif;
+  background: #ece9e1;
+}
+
+/* Just all the styling for navigation bar and links, some for hover
+functioanlity as well for fancy */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-family: "DM Serif Display";
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo,
+.logo-link {
+  margin-left: 10px;
+  font-size: 1.2em;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: color 0.5s ease; /* Animatin makes it look a bit nicer */
+}
+
+.logo:hover,
+.logo-link:hover {
+  color: #a14545; /* Different colour so user can confirm theyre hovering */
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+nav a,
+form {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: "DM Serif Display";
+  padding: 5px 10px;
+  transition: color 0.5s ease;
+}
+
+nav a:hover {
+  color: #a14545;
+}
+
+#search-count {
+  text-align: center;
+  padding-top: 3%;
+}
+
+#search-text {
+  padding: 5px;
+  width: 150px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+/* The original code for this is from https://codepen.io/anon/pen/myqamE, we have 
+changed it so there is no hexagonal grid with a skewed perspective but have kept 
+the grid style. We have also added it so it flips when hoevered instead of getting
+bigger. The majority of the original css has been dramatically changed */
+.grid {
+  background: #ece9e1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+
+.grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  text-align: center;
+  width: 35vw;
+  height: 35vw;
+  max-width: 250px;
+  max-height: 250px;
+  margin: 1vw;
+  perspective: 1000px;
+}
+
+.grid-item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  background: #bbb;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item:hover .grid-item-inner {
+  transform: rotateY(180deg); /*Rotating on hover */
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 1); 
+}
+
+.grid-item-front,
+.grid-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.grid-item-front {
+  background-color: #bbb;
+}
+
+.grid-item-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover;
+}
+
+.grid-item-back {
+  transform: rotateY(180deg);
+  background-color: rgb(143, 31, 31);
+  color: white;
+}
+
+.grid-item-back a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-back h2 {
+  border: 5px;
+  font-size: 20px;
+  margin: 0;
+  margin: 20px;
+  position: relative;
+}
+
+/* End code snipped */
+
+/* This part is for the image.html and result.html. All
+of them are related to the "draggable container" that is
+the section that users can drag the flowers onto */
+#draggable-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 200px;
+  background: #ece9e1;
+  flex: 1;
+}
+
+/*Soldier Image */
+#displayed-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  box-shadow: 100px 100px 200px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 30px white, 0 0 0 60px #312203;
+  margin-top: 5%;
+  border: solid 3px grey;
+  padding: 20px;
+  background-color: white;
+}
+
+.info-box {
+  margin-top: 20px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  background-color: white;
+  border: #000;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 100px;
+  text-align: center;
+}
+
+.info-box h2 {
+  font-family: "DM Serif Text", serif;
+}
+
+#image-title,
+#resultName {
+  color: black;
+  font-weight: bold;
+}
+
+#image-description {
+  font-weight: lighter;
+}
+
+/* Flower image that has been duplicated */
+.cloned-image {
+  position: absolute;
+  cursor: move;
+}
+
+/* This next section is for the draggable flowers
+dock in index.html and result.html */
+#flower-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flower-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.flower {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* Just the button to remove the clones */
+#remove-clones {
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* This next section is for the create.html page
+mainly containing a lot of input boxes */
+.input-section {
+  border: black;
+  border-radius: 9px;
+  background-color: rgb(250, 250, 250);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0px 90px 0px 90px;
+  margin-bottom: 40%;
+}
+
+/* Row that contains input boxes */
+.input-row {
+  padding-left: 3%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+/* The actual input box */
+.input-row input {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  border: 0px;
+  width: 60%;
+  padding: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Button to add a section */
+.input-section button {
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+/* This is actually the delete button */
+.input-row button {
+  position: absolute;
+  top: 26%;
+  right: 17vw;
+  background: none;
+  cursor: pointer;
+}
+
+/*Title for the input above it */
+.input-row label {
+  display: block;
+  text-align: left;
+  padding-left: 19%;
+}
+
+/* The buttons to add input and submit */
+#addInputButton,
+#submitButton {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  border-bottom: 30px;
+}
+
+/* This next section is for the footer */
+footer {
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+  background-color: black;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+
+footer a:hover {
+  color: rgb(143, 31, 31);
+  text-decoration: underline;
+}

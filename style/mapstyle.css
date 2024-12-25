@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Serif Display", serif;
+  background: #eee;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-family: "DM Serif Display";
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo,
+.logo-link {
+  margin-left: 10px;
+  font-size: 1.2em;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: color 0.5s ease;
+}
+
+.logo:hover,
+.logo-link:hover {
+  color: #a14545;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+nav a,
+form {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: "DM Serif Display";
+  padding: 5px 10px;
+  transition: color 0.5s ease;
+}
+
+nav a:hover {
+  color: #a14545;
+}
+
+#search-text {
+  padding: 5px;
+  width: 150px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+/* Mapbox */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Edit the appearance of marker in map */
+.marker {
+  background-image: url("map-pin.svg");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Pop up page in map */
+.mapboxgl-popup {
+  padding-bottom: 10px;
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.mapboxgl-popup-content {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+/* Header of flower name displayed in pop-up */
+.mapboxgl-popup-content h2 {
+  word-wrap: break-word;
+  background: #780607;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  margin-top: -8px;
+  font-family: "DM Serif Text", serif;
+}
+
+/* Text of flower description */
+.mapboxgl-popup-content p {
+  font-family: "DM Sans", sans-serif;
+}
+
+.mapboxgl-popup-content img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.pop-up-page-description {
+  font-size: 12px !important;
+}
+
+/* Shape of button in pop-up */
+.pop-up-page-extra-button1 {
+  height: 55px;
+  width: 220px;
+  background: #6c150f;
+  border: 0.5 px solid;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.pop-up-page-extra-button2 {
+  height: 55px;
+  width: 220px;
+  background-color: #404040;
+  border: 0.5 px solid;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}

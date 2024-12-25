@@ -1,0 +1,166 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main {
+  padding: 2rem;
+
+  background: linear-gradient(
+    to bottom,
+    #1473e6,
+    cubic-bezier(0.25, 1, 0.5, 1),
+    #247b5e
+  );
+}
+
+main p {
+  font-size: 1.5rem;
+  line-height: 28px;
+  color: black;
+}
+
+.container,
+.container-inner {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container inner {
+  max-width: 1000px;
+}
+
+/* Responsiveness for smaller screen */
+@media screen and (max-width: 800px) {
+  nav .container-inner {
+    display: none;
+  }
+  nav .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body {
+  font-family: "DM Serif Display", serif;
+  padding-top: 20%;
+}
+
+p {
+  font-size: medium;
+  color: black;
+  align-items: center;
+}
+
+img {
+  width: 400px;
+  align-items: center;
+  display: block;
+  padding-left: 20%;
+}
+.wrapper {
+  display: grid;
+
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 2/5;
+}
+
+.two {
+  grid-column: 5/7;
+}
+
+p2 {
+  color: #bababa;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-family: "DM Serif Text", serif;
+}
+
+/* Header Section */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-family: "DM Serif Display";
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo,
+.logo-link {
+  margin-left: 10px;
+  font-size: 1.2em;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: color 0.5s ease;
+}
+
+.logo:hover,
+.logo-link:hover {
+  color: #a14545;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+nav a,
+form {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: "DM Serif Display";
+  padding: 5px 10px;
+  transition: color 0.5s ease;
+}
+
+nav a:hover {
+  color: #a14545;
+}
+
+#search-text {
+    padding: 5px;
+    width: 150px;
+    border-style: solid;
+    border-color: whitesmoke;
+  }

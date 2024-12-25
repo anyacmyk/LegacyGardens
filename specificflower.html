@@ -1,0 +1,78 @@
+<!--
+This page just displays the data for specific flowers.
+
+It transfers the data through the pages with map.js so that
+is can be dislayed in a single html file. It uses a specific 
+styling file "flower.css" as a lot of elemetns were reused.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Legacy Gardens</title>
+    <link href="style/flower.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div class="header">
+      <p class="logo">
+        <a href="index.html" class="logo-link">Legacy Gardens</a>
+      </p>
+      <nav>
+        <a href="map.html">Map</a>
+        <a href="create.html">Create</a>
+        <a href="help.html">Help</a>
+        
+        <form id="filter">
+          <input id="search-redirect-text" type="text" placeholder="Search" value="" />
+        </form>
+      </nav>
+    </div>
+
+    <!-- Main part to show the flowers-->
+    <div class="wrapper">
+      <div class="one">
+        <h1>Hi,</h1>
+        <h1>I'm <span id="flower-name" style="color: #780607"></span></h1>
+        <p2>emblem of beauty</p2>
+        <p id="flower-description"></p>
+      </div>
+      <div class="two">
+        <img class="flower-picture" id="flower-image" alt="Flower image"/>
+      </div>
+    </div>
+
+    <script src="javascript/map.js"></script>
+    <script src="javascript/redirect.js"></script>
+  </body>
+</html>

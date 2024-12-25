@@ -1,0 +1,110 @@
+<!-- 
+ This is another page that just has lots of text.
+ To access this page the user must go to the footer.
+ There is no code specific for this page, all styling
+ is from style.css and is reused.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Gardens</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Serif Display"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- This little link is for the flower icon in the tab bar -->
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+
+  <body>
+    <div id="draggable-container">
+      <div class="info-box">
+        <h2 id="image-title">Adding a Loved One</h2>
+        <p class="profile-text">
+          <b>Step 1: </b> Click on "Create" in the header to start a new profile
+          for your loved one.
+        </p>
+        <p class="profile-text">
+          <b>Step 2: </b> Upload an image of your loved one and add their name.
+        </p>
+        <p class="profile-text">
+          <b>Step 3: </b> If there is any additional information you would like
+          to add to their memorial, click on "Add Information Field".<br /><br />If
+          you added too many fields by mistake, click on the bin icon to delete
+          the extra field.
+        </p>
+        <p class="profile-text">
+          <b>Step 4: </b> Submit your loved one's information.
+        </p>
+        <br /><br /><br />
+        <h2 id="image-title">Learning About Native Flowers</h2>
+        <p class="profile-text">
+          <b>Step 1: </b> Click on "Map" in the header.
+        </p>
+        <p class="profile-text">
+          <b>Step 2: </b> Find a region on the map where you would like to
+          discover local flowers.
+        </p>
+        <p class="profile-text">
+          <b>Step 3: </b> Click to learn more about the selected flower.
+        </p>
+        <br /><br /><br />
+        <h2 id="image-title">Adding Flowers to a Memorial Garden</h2>
+        <p class="profile-text">
+          <b>Step 1: </b> Navigate to a memorial within the home page. Search
+          for a memorial and if it does not already exist, create a new one.
+        </p>
+        <p class="profile-text">
+          <b>Step 2: </b> Click on a flower you would like to add to the
+          profile. This will add a flower to the bottom of the person's image.
+        </p>
+        <p class="profile-text">
+          <b>Step 3: </b> Drag the flower to wherever you would like to on the
+          screen. If you have added too many or are finished, click "Remove All
+          Flowers" to remove the flowers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Header Section-->
+    <div class="header">
+      <p class="logo">
+        <a href="index.html" class="logo-link">Legacy Gardens</a>
+      </p>
+      <nav>
+        <a href="map.html">Map</a>
+        <a href="create.html">Create</a>
+        <a href="help.html">Help</a>
+
+        <form id="filter">
+          <input
+            id="search-redirect-text"
+            type="text"
+            placeholder="Search"
+            value=""
+          />
+        </form>
+      </nav>
+    </div>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/redirect.js"></script>
+  </body>
+
+  <footer>
+    <p>&copy Legacy Gardens</p>
+    <p><a href="about.html">About Us</a></p>
+  </footer>
+</html>
