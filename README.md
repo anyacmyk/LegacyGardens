@@ -96,7 +96,5 @@ Contributions are not welcome.
 
  - Great README Templates: https://readme.so/editor
  - All music has been sources and bought from iTunes
- - Images have all ben taken by Kurt McCullough and have everyones permission to be used
  - Code for some interactions has been sourced from w3 schools: https://www.w3schools.com
- - All writing has been completed by Kurt McCullough
 
